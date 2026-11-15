@@ -1,0 +1,251 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f6ff;
+    color: #193451;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #061b40, #0752a5, #1685d8);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+header p {
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #d9ecff;
+}
+
+/* NAVIGATION */
+nav {
+    background: white;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgba(10, 50, 100, 0.08);
+}
+
+nav a {
+    text-decoration: none;
+    color: #124b85;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1685d8;
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 75px 8%;
+    scroll-margin-top: 75px;
+}
+
+/* HOME */
+#home {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: #f8fbff;
+}
+
+#home img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 7px solid #c8e2ff;
+    box-shadow: 0 10px 30px rgba(10, 80, 160, 0.15);
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h2 {
+    font-size: 40px;
+    color: #10345d;
+    margin-bottom: 30px;
+}
+
+.home-content h2 span {
+    color: #1685d8;
+}
+
+.home-content h3 {
+    color: #0872c5;
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+.home-content p {
+    color: #607b99;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #0752a5, #1685d8);
+    color: white;
+    padding: 17px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(7, 82, 165, 0.3);
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-size: 32px;
+    color: #124b85;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(10, 50, 100, 0.08);
+    border-left: 5px solid #1685d8;
+}
+
+.card h3 {
+    color: #0872c5;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #607b99;
+}
+
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: #124b85;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(10, 50, 100, 0.08);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #0752a5;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* JAVA PROJECT */
+.code-container {
+    background: #102b4c;
+    padding: 30px;
+    border-radius: 18px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(10, 50, 100, 0.15);
+}
+
+.code-container h3 {
+    color: #69baff;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.code-container p {
+    color: #d2e8ff;
+    line-height: 1.8;
+}
+
+.code-container .developer {
+    color: #69baff;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #061b40;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    color: #c5e2ff;
+    margin: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    #home img {
+        width: 250px;
+        height: 320px;
+    }
+
+    .home-content h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}

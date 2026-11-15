@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larxy Ace M. Baldovino | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>LARXY ACE M. BALDOVINO</h1>
+        <p>BS Information Technology | Student</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#personal">Personal Information</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#java">Java Project</a>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+
+        <img src="c:\Users\jeanv\Downloads\pfp.jpg" alt="Larxy Ace M. Baldovino">
+
+        <div class="home-content">
+            <h2>Hello, I'm <span>Larxy Ace!</span></h2>
+
+            <h3>Welcome to My Personal Portfolio</h3>
+
+            <p>
+                I am an 18-year-old student currently taking
+                Bachelor of Science in Information Technology.
+                I am passionate about learning new things,
+                exploring technology, and developing my skills
+                in programming and computer-related activities.
+            </p>
+
+            <a href="#personal" class="btn">
+                Explore My Profile
+            </a>
+        </div>
+
+    </section>
+
+    <!-- PERSONAL INFORMATION -->
+    <section id="personal">
+
+        <h2 class="section-title">Personal Information</h2>
+
+        <div class="card">
+            <h3>About Me</h3>
+
+            <p>
+                Name: Larxy Ace M. Baldovino<br>
+                Age: 18 years old<br>
+                Address: Brgy. Cavite, Guimba, Nueva Ecija<br>
+                Course: BS Information Technology<br>
+                Year Level: First Year
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Personal Introduction</h3>
+
+            <p>
+                I am a motivated and enthusiastic student
+                who enjoys learning and improving my knowledge.
+                I believe that education, determination, and
+                hard work are important in achieving my goals.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <h2 class="section-title">Educational Background</h2>
+
+        <div class="card">
+            <h3>College</h3>
+
+            <p>
+                Bachelor of Science in Information Technology<br>
+                Our Lady of the Sacred Heart of Guimba, Inc.<br>
+                First Year College
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Senior High School</h3>
+
+            <p>
+                Bonifacio Luz Natividad Educational Foundation, Inc.<br>
+                Humanities and Social Sciences (HUMSS)<br>
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Junior High School</h3>
+
+            <p>
+                Bartolome Sangalang National High School<br>
+                2024
+            </p>
+        </div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">Communication</div>
+            <div class="skill">Teamwork</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java Programming</div>
+
+        </div>
+
+    </section>
+
+    <!-- JAVA PROJECT -->
+    <section id="java">
+
+        <h2 class="section-title">My Java Project</h2>
+
+        <div class="code-container">
+
+            <h3>Number Guessing Game</h3>
+
+            <p class="project-description">
+                A console-based two-player game developed
+                using Java. Players take turns placing X
+                and O on a 3x3 board. The game includes
+                winner detection, draw detection, and
+                a replay option.
+            </p>
+
+            <pre><code>
+import java.util.Scanner;
+import java.util.Random;
+
+public class NumberGuessingGame {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        int totalScore = 0;
+        int gamesPlayed = 0;
+        int gamesWon = 0;
+
+        boolean playAgain = true;
+
+        System.out.println("====================================");
+        System.out.println("       NUMBER GUESSING GAME");
+        System.out.println("====================================");
+        System.out.println("Welcome, Larxy!");
+        System.out.println("Developed by: Larxy Ace Baldovino");
+        System.out.println("Guess the secret number to win!");
+
+        while (playAgain) {
+
+            System.out.println("\nSELECT DIFFICULTY");
+            System.out.println("1. Easy (1-10)");
+            System.out.println("2. Medium (1-50)");
+            System.out.println("3. Hard (1-100)");
+
+            System.out.print("\nEnter your choice: ");
+
+            if (!input.hasNextInt()) {
+                System.out.println("Invalid input!");
+                input.next();
+                continue;
+            }
+
+            int choice = input.nextInt();
+
+            int maxNumber;
+            int maxAttempts;
+
+            switch (choice) {
+
+                case 1:
+                    maxNumber = 10;
+                    maxAttempts = 5;
+                    break;
+
+                case 2:
+                    maxNumber = 50;
+                    maxAttempts = 7;
+                    break;
+
+                case 3:
+                    maxNumber = 100;
+                    maxAttempts = 10;
+                    break;
+
+                default:
+                    System.out.println("Invalid difficulty!");
+                    continue;
+            }
+
+            int secretNumber = random.nextInt(maxNumber) + 1;
+            int attempts = 0;
+            boolean guessed = false;
+
+            gamesPlayed++;
+
+            System.out.println("\nI selected a number between 1 and "
+                    + maxNumber + ".");
+
+            System.out.println("You have " + maxAttempts
+                    + " attempts to guess it!");
+
+            while (attempts < maxAttempts) {
+
+                System.out.print("\nEnter your guess: ");
+
+                if (!input.hasNextInt()) {
+                    System.out.println("Please enter a valid number!");
+                    input.next();
+                    continue;
+                }
+
+                int guess = input.nextInt();
+
+                if (guess < 1 || guess > maxNumber) {
+                    System.out.println("Number out of range!");
+                    continue;
+                }
+
+                attempts++;
+
+                if (guess == secretNumber) {
+
+                    System.out.println("\nCORRECT! YOU WIN!");
+                    System.out.println("You guessed the number!");
+                    
+                    int points = (maxAttempts - attempts + 1) * 10;
+
+                    totalScore += points;
+                    gamesWon++;
+
+                    System.out.println("Attempts used: " + attempts);
+                    System.out.println("Points earned: " + points);
+
+                    guessed = true;
+                    break;
+
+                } else if (guess < secretNumber) {
+
+                    System.out.println("Too LOW! Try a higher number.");
+
+                } else {
+
+                    System.out.println("Too HIGH! Try a lower number.");
+
+                }
+
+                System.out.println("Attempts remaining: "
+                        + (maxAttempts - attempts));
+            }
+
+            if (!guessed) {
+
+                System.out.println("\nGAME OVER!");
+                System.out.println("The secret number was: "
+                        + secretNumber);
+            }
+
+            System.out.println("\n========== SCOREBOARD ==========");
+            System.out.println("Games Played: " + gamesPlayed);
+            System.out.println("Games Won: " + gamesWon);
+            System.out.println("Total Score: " + totalScore);
+            System.out.println("================================");
+
+            System.out.print("\nDo you want to play again? (Y/N): ");
+
+            String answer = input.next();
+
+            if (!answer.equalsIgnoreCase("Y")) {
+                playAgain = false;
+            }
+        }
+
+        System.out.println("\n====================================");
+        System.out.println("       THANK YOU FOR PLAYING!");
+        System.out.println("====================================");
+        System.out.println("Player: Larxy Ace Baldovino");
+        System.out.println("Games Played: " + gamesPlayed);
+        System.out.println("Games Won: " + gamesWon);
+        System.out.println("Final Score: " + totalScore);
+        System.out.println("====================================");
+
+        input.close();
+    }
+}
+        </code></pre>
+
+    </div>
+
+</section>
+
+            </div>
+            <p class="developer">
+                Developed by: Larxy Ace M. Baldovino
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Larxy Ace M. Baldovino</p>
+        <p>My Personal Portfolio | Designed with HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
